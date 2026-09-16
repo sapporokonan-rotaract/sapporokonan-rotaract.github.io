@@ -25,15 +25,6 @@ collections:
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
       - {
-          label: "アイキャッチ画像",
-          name: "image",
-          widget: "image",
-          required: false,
-          hint: "任意。設定すると一覧と記事ページの先頭に表示されます。",
-        }
-      - { label: "本文", name: "body", widget: "markdown" }
-    meta:
-      - {
           label: "公開日",
           name: "date",
           widget: "datetime",
@@ -42,3 +33,11 @@ collections:
           time_format: false,
           picker_utc: true,
         }
+      - {
+          label: "アイキャッチ画像",
+          name: "image",
+          widget: "image",
+          required: false,
+          hint: "任意。設定すると一覧と記事ページの先頭に表示されます。",
+        }
+      - { label: "本文", name: "body", widget: "markdown" }
