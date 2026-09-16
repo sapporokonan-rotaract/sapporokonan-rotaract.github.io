@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: sapporokonan-rotaract/sapporokonan-rotaract.github.io
+  branch: main
+  # OAuth認証を仲介するサーバーのURL。ADMIN.mdの手順でCloudflare Workerを
+  # デプロイしたら、そのWorkerのURLに書き換えてください(末尾の / は不要)。
+  base_url: https://REPLACE-WITH-YOUR-OAUTH-WORKER.workers.dev
+
+site_url: https://sapporokonan-rotaract.github.io
+logo_url: /assets/images/favicon.svg
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "activities"
+    label: "活動報告"
+    label_singular: "活動報告"
+    description: "トップページと活動報告(/activities/)一覧に表示されます。"
+    folder: "_posts"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - {
+          label: "アイキャッチ画像",
+          name: "image",
+          widget: "image",
+          required: false,
+          hint: "任意。設定すると一覧と記事ページの先頭に表示されます。",
+        }
+      - { label: "本文", name: "body", widget: "markdown" }
+    meta:
+      - {
+          label: "公開日",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          picker_utc: true,
+        }

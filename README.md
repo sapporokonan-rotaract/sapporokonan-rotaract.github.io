@@ -69,8 +69,15 @@ url: "https://sapporo-konan-rotaract.github.io"
 
 ## 3. サイトの編集方法
 
-### 3-1. 新しい活動報告(ブログ記事)を追加する
+### 3-0. 管理画面から活動報告を作成・編集する(おすすめ)
 
+`https://sapporokonan-rotaract.github.io/admin/` にアクセスすると、
+Markdownやgitの知識がなくても、画面上のフォームから活動報告の作成・編集ができます。
+初回セットアップ(OAuth連携)が必要です。詳しくは [ADMIN.md](ADMIN.md) を参照してください。
+
+### 3-1. 新しい活動報告(ブログ記事)を手動で追加する
+
+管理画面を使わず、直接Markdownファイルを追加することもできます。
 `_posts` フォルダに、以下の形式でMarkdownファイルを追加してください。
 
 - ファイル名: `YYYY-MM-DD-好きなタイトル.md`(例: `2026-06-15-summer-volunteer.md`)
