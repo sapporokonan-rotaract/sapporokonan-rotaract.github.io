@@ -6,13 +6,8 @@ description: >-
   北海道札幌市を拠点に活動する青年奉仕団体、札幌江南ロータアクトクラブの公式サイトです。
   例会情報や活動報告、入会案内などを発信しています。
 
-# ▼▼▼ 要変更 ▼▼▼
-# GitHub Organization を作成したら、実際のURLに書き換えてください
-# 例: Organization名が "sapporo-konan-rotaract" で
-#     リポジトリ名を "sapporo-konan-rotaract.github.io" にした場合
-url: "https://sapporo-konan-rotaract.github.io"
+url: "https://sapporokonan-rotaract.github.io"
 baseurl: ""
-# ▲▲▲ 要変更 ▲▲▲
 
 lang: ja
 timezone: Asia/Tokyo
