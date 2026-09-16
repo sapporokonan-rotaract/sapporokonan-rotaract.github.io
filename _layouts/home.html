@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Sapporo Konan Rotaract Club</p>
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-lead">{{ site.description }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/join/' | relative_url }}">入会案内を見る</a>
+      <a class="btn btn-outline" href="{{ '/about/' | relative_url }}">クラブについて</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>新着の活動報告</h2>
+      <a class="section-more" href="{{ '/activities/' | relative_url }}">すべて見る →</a>
+    </div>
+
+    {% assign recent_posts = site.posts | limit: 3 %}
+    {% if recent_posts.size > 0 %}
+      <div class="card-grid">
+        {% for post in recent_posts %}
+          <a class="card" href="{{ post.url | relative_url }}">
+            {% if post.image %}
+              <img class="card-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            {% endif %}
+            <div class="card-body">
+              <p class="card-date">{{ post.date | date: "%Y年%-m月%-d日" }}</p>
+              <h3 class="card-title">{{ post.title }}</h3>
+              <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 60 }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-note">まだ活動報告がありません。<code>_posts</code> フォルダに投稿を追加してください。</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container container-narrow section-cta">
+    <h2>ロータアクトに興味がある方へ</h2>
+    <p>
+      札幌江南ロータアクトクラブでは、奉仕活動やリーダーシップ開発、
+      国内外のロータリー・ロータアクトメンバーとの交流を通じて成長できる場を提供しています。
+      見学・体験参加も歓迎です。
+    </p>
+    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">お問い合わせはこちら</a>
+  </div>
+</section>

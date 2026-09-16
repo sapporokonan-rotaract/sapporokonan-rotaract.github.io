@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="container container-narrow">
+    <p class="post-date">{{ page.date | date: "%Y年%-m月%-d日" }}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.image %}
+      <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <p class="post-back"><a href="{{ '/activities/' | relative_url }}">&larr; 活動報告一覧へ戻る</a></p>
+  </div>
+</article>

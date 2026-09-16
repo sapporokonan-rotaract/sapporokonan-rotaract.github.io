@@ -1,0 +1,64 @@
+# サイト全体の基本設定
+# ここを書き換えるだけでサイト名・説明文・URLが変わります
+
+title: 札幌江南ロータアクトクラブ
+description: >-
+  北海道札幌市を拠点に活動する青年奉仕団体、札幌江南ロータアクトクラブの公式サイトです。
+  例会情報や活動報告、入会案内などを発信しています。
+
+# ▼▼▼ 要変更 ▼▼▼
+# GitHub Organization を作成したら、実際のURLに書き換えてください
+# 例: Organization名が "sapporo-konan-rotaract" で
+#     リポジトリ名を "sapporo-konan-rotaract.github.io" にした場合
+url: "https://sapporo-konan-rotaract.github.io"
+baseurl: ""
+# ▲▲▲ 要変更 ▲▲▲
+
+lang: ja
+timezone: Asia/Tokyo
+
+# ナビゲーションメニュー(ヘッダーの並び順)
+nav:
+  - title: ホーム
+    url: /
+  - title: クラブ紹介
+    url: /about/
+  - title: 活動報告
+    url: /activities/
+  - title: 例会・行事予定
+    url: /events/
+  - title: 入会案内
+    url: /join/
+  - title: お問い合わせ
+    url: /contact/
+
+# 連絡先・SNS(お問い合わせページやフッターで使用。未定なら空のままでOK)
+contact:
+  email: ""
+  instagram: ""
+  x: ""
+  facebook: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+permalink: /activities/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor

@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}">
+      <span class="site-brand-mark" aria-hidden="true"></span>
+      <span class="site-brand-text">{{ site.title }}</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav">
+      <ul>
+        {% for item in site.nav %}
+          {% assign is_current = false %}
+          {% if page.url == item.url %}{% assign is_current = true %}{% endif %}
+          <li><a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
