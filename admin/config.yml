@@ -2,9 +2,8 @@ backend:
   name: github
   repo: sapporokonan-rotaract/sapporokonan-rotaract.github.io
   branch: main
-  # OAuth認証を仲介するサーバーのURL。ADMIN.mdの手順でCloudflare Workerを
-  # デプロイしたら、そのWorkerのURLに書き換えてください(末尾の / は不要)。
-  base_url: https://REPLACE-WITH-YOUR-OAUTH-WORKER.workers.dev
+  # OAuth認証を仲介するCloudflare WorkerのURL(末尾の / は不要)。
+  base_url: https://decap-cms-github-oauth-api.decap-cms-github-oauth-api-cloudflare-worker.workers.dev
 
 site_url: https://sapporokonan-rotaract.github.io
 logo_url: /assets/images/favicon.svg
