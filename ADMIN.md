@@ -3,8 +3,13 @@
 `/admin/` にアクセスすると、Markdownやgitの知識がなくても、画面上のフォームから
 活動報告の作成・編集ができる管理画面([Decap CMS](https://decapcms.org/))が使えます。
 
-すでにセットアップ済みの場合は、下記の「4. 管理画面を使う」だけ読めばOKです。
-初回セットアップ(最初の1人だけ)は 1〜3 の作業が必要です。
+**セットアップは完了済みです。** 普段は下記の「4. 管理画面を使う」だけ読めばOKです。
+1〜3 は、OAuth AppやCloudflare Workerを作り直す必要が出たとき(乗っ取り対応や作り直しなど)のための記録です。
+
+- 使用しているGitHub OAuth App: Organization `sapporokonan-rotaract` の Developer settings → OAuth Apps →
+  `sapporo-konan-rotaract admin`(`https://github.com/organizations/sapporokonan-rotaract/settings/applications`)
+- OAuth仲介用Cloudflare Worker: `https://decap-cms-github-oauth-api.decap-cms-github-oauth-api-cloudflare-worker.workers.dev`
+  (Fork元コードは `https://github.com/sapporokonan-rotaract/decap-cms-github-oauth-provider-cloudflare`)
 
 ---
 
@@ -78,3 +83,24 @@ backend:
 
 管理画面を使えるのは、このリポジトリの **Collaborator** に招待されたGitHubアカウントのみです。
 役員交代時はリポジトリの Settings → Collaborators and teams から追加・削除してください。
+
+## 5. うまくいかないときに実際に起きたトラブルと対処
+
+セットアップ時に以下でつまずいたので、同じ状況になったら参考にしてください。
+
+- **`'collections[0].meta' must be object`**: 旧Netlify CMSの`meta:`配列構文は現在のDecap CMSでは廃止。
+  日付は`meta`ではなく通常の`fields`に`widget: datetime`として入れる。
+- **Cloudflareアカウント作成直後、確認メールが届かない/確認してもWorkerデプロイが
+  `You need to verify your email address to use Workers`(code 10034)で失敗し続ける**:
+  ダッシュボード上は確認済みに見えても、API側の判定が追いつかない既知の不具合が起きることがある。
+  ダッシュボードの画面から直接Workerを1つ作ってみる(Compute → Workers → Create)と、
+  それをきっかけに解消することがあった。
+- **デプロイは成功するが `/auth` にアクセスすると `client_id=` が空でGitHubが404になる**:
+  `wrangler secret put CLIENT_ID` / `CLIENT_SECRET` を対話的に(値を手打ち・貼り付けで)実行すると、
+  なぜか空文字列が登録されてしまうことがあった。
+  `printf '%s' "$VALUE" | wrangler secret put CLIENT_ID` のように標準入力へパイプする形で
+  実行し直したら解決した。
+- **`Authorization callback URL`を仮の値のまま忘れると、ログイン時に
+  `placeholder.workers.dev` で `DNS_PROBE_FINISHED_NXDOMAIN`**:
+  GitHub OAuth Appの設定画面の「Redirect URIs」を、実際のWorker URL + `/callback` に
+  更新するのを忘れずに。

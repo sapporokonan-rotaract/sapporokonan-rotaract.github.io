@@ -14,6 +14,9 @@
     </div>
     {% endif %}
 
-    <p class="site-footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+    <p class="site-footer-copyright">
+      &copy; {{ 'now' | date: "%Y" }} {{ site.title }}
+      <a class="site-footer-admin" href="{{ '/admin/' | relative_url }}">管理者ログイン</a>
+    </p>
   </div>
 </footer>
