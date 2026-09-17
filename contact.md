@@ -6,6 +6,25 @@ permalink: /contact/
 
 見学のお申し込み、入会に関するご質問、その他お問い合わせは以下の方法でご連絡ください。
 
+## お問い合わせフォーム
+
+必要事項にご記入のうえ、送信ボタンをおしてください。
+
+<!--
+  TODO: Googleフォーム作成後、「送信」→「埋め込み <>」タブで取得したURLを
+  下記 src="＜ここにURLを貼る＞" に差し替えてください。
+-->
+<iframe
+  src="＜ここにGoogleフォームの埋め込みURLを貼る＞"
+  width="100%"
+  height="1000"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+>読み込んでいます…</iframe>
+
+ご入力いただく個人情報の取り扱いについては、[プライバシーポリシー]({{ '/privacy/' | relative_url }})をご確認ください。
+
 ## メールでのお問い合わせ
 
 <!-- site.contact.email を _config.yml に設定すると、下のリンクが自動的に有効になります -->
