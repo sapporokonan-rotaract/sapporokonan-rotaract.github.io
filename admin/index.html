@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>管理画面 | 札幌江南ロータアクトクラブ</title>
   <link rel="icon" href="../assets/images/favicon.svg" />
+  <style>
+    #back-to-site {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 9999;
+      padding: 6px 12px;
+      background: #1b2a4a;
+      color: #fff;
+      font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+    #back-to-site:hover {
+      background: #2a3d66;
+    }
+  </style>
 </head>
 <body>
   <!-- Decap CMS(旧Netlify CMS)。GitHubアカウントでログインし、画面から活動報告の作成・編集ができます。 -->
+  <a id="back-to-site" href="https://sapporokonan-rotaract.github.io/">← サイトTOPに戻る</a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
