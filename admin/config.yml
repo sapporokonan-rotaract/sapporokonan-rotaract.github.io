@@ -7,6 +7,7 @@ backend:
 
 site_url: https://sapporokonan-rotaract.github.io
 logo_url: /assets/images/favicon.svg
+locale: "ja"
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
