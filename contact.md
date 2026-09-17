@@ -10,12 +10,8 @@ permalink: /contact/
 
 必要事項にご記入のうえ、送信ボタンをおしてください。
 
-<!--
-  TODO: Googleフォーム作成後、「送信」→「埋め込み <>」タブで取得したURLを
-  下記 src="＜ここにURLを貼る＞" に差し替えてください。
--->
 <iframe
-  src="＜ここにGoogleフォームの埋め込みURLを貼る＞"
+  src="https://docs.google.com/forms/d/e/1FAIpQLSe8VzGnbDiV6xO2TRMAnK378i9f_It87G93nonMUvDNePuH1w/viewform?embedded=true"
   width="100%"
   height="1000"
   frameborder="0"
@@ -38,18 +34,3 @@ permalink: /contact/
 
 フッターのリンクからも各SNSをご覧いただけます。SNSのDM等でのお問い合わせも可能です
 (利用するSNSと連絡先は <code>_config.yml</code> の <code>contact</code> 項目で設定してください)。
-
-<!--
-  GitHub Pages は静的サイトのため、サーバー側でフォームの内容を受け取ることができません。
-  お問い合わせフォームが欲しい場合は、完全無料の Google フォームを作成し、
-  以下のように埋め込むことをおすすめします。
-
-  1. Google フォームで質問項目を作成
-  2. 「送信」→「埋め込み <>」タブでHTMLコードを取得
-  3. 下記のコメントを外して <iframe> を貼り付け
-
-  <iframe src="https://docs.google.com/forms/d/e/xxxxxxxx/viewform?embedded=true"
-          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
-    読み込んでいます…
-  </iframe>
--->
