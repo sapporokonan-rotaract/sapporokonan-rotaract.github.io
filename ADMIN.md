@@ -82,6 +82,9 @@ backend:
 5. 数分後、GitHub Actionsのビルドが終わるとサイトに反映されます(Actionsタブで進捗確認可)
 
 管理画面を使えるのは、このリポジトリの **Collaborator** に招待されたGitHubアカウントのみです。
+Collaboratorでないアカウントは、OAuth仲介Worker(`/callback`)がGitHub API経由で
+このリポジトリへのpush権限を確認し、権限がなければその場でログインを拒否します
+(`/admin/`の画面自体には入れません)。
 役員交代時はリポジトリの Settings → Collaborators and teams から追加・削除してください。
 
 ## 5. うまくいかないときに実際に起きたトラブルと対処
