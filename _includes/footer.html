@@ -7,9 +7,7 @@
 
     {% if site.contact.email or site.contact.instagram or site.contact.x or site.contact.facebook %}
     <div class="site-footer-links">
-      {% if site.contact.email %}<a href="mailto:{{ site.contact.email }}">Email</a>{% endif %}
       {% if site.contact.instagram %}<a href="{{ site.contact.instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
-      {% if site.contact.x %}<a href="{{ site.contact.x }}" target="_blank" rel="noopener">X</a>{% endif %}
       {% if site.contact.facebook %}<a href="{{ site.contact.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
     </div>
     {% endif %}

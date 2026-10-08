@@ -29,9 +29,7 @@ nav:
 
 # 連絡先・SNS(お問い合わせページやフッターで使用。未定なら空のままでOK)
 contact:
-  email: ""
   instagram: ""
-  x: ""
   facebook: ""
 
 plugins:
