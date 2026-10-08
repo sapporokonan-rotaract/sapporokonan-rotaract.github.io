@@ -29,8 +29,3 @@ permalink: /contact/
 {% else %}
 <p class="empty-note">＜_config.yml の contact.email にメールアドレスを設定してください＞</p>
 {% endif %}
-
-## SNSでのお問い合わせ
-
-フッターのリンクからも各SNSをご覧いただけます。SNSのDM等でのお問い合わせも可能です
-(利用するSNSと連絡先は <code>_config.yml</code> の <code>contact</code> 項目で設定してください)。
