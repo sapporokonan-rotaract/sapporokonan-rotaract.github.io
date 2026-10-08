@@ -20,12 +20,3 @@ permalink: /contact/
 >読み込んでいます…</iframe>
 
 ご入力いただく個人情報の取り扱いについては、[プライバシーポリシー]({{ '/privacy/' | relative_url }})をご確認ください。
-
-## メールでのお問い合わせ
-
-<!-- site.contact.email を _config.yml に設定すると、下のリンクが自動的に有効になります -->
-{% if site.contact.email %}
-<p><a class="btn btn-primary" href="mailto:{{ site.contact.email }}">{{ site.contact.email }} 宛にメールを送る</a></p>
-{% else %}
-<p class="empty-note">＜_config.yml の contact.email にメールアドレスを設定してください＞</p>
-{% endif %}
