@@ -4,9 +4,6 @@ title: 活動報告
 permalink: /activities/
 ---
 
-これまでの活動の様子を紹介します。新しい活動報告は [_posts フォルダ](https://github.com) に
-Markdown ファイルを追加するだけで、自動的にこの一覧に表示されます(追加方法は README.md 参照)。
-
 <div class="card-grid">
 {% for post in site.posts %}
   <a class="card" href="{{ post.url | relative_url }}">
