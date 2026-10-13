@@ -127,10 +127,15 @@ contact:
   facebook: "https://www.facebook.com/xxxx"
 ```
 
-### 3-4. お問い合わせフォームを設置したい場合
+### 3-4. お問い合わせフォーム
 
 GitHub Pagesは静的サイトのため、フォームの送信内容をサーバー側で受け取ることができません。
-無料の **Googleフォーム** を作成し、`contact.md` 内のコメントを参考に埋め込むことをおすすめします。
+そのため、無料の **Googleフォーム** を作成し、`contact.md` に埋め込んで運用しています。
+
+- 埋め込み元のGoogleフォーム(編集・回答確認): https://docs.google.com/forms/d/1T5P1LaRViDimSwRzVsh-otBH_SSE937bpMsphAyxCsg/edit
+- 送信された内容は、上記ページの「回答」タブで確認できます(スプレッドシートアイコンからGoogleスプレッドシートとしても閲覧可能)
+- 埋め込みURLを変更したい場合は `contact.md` 内の `<iframe src="...">` を差し替えてください
+- 個人情報の取り扱いについては [`privacy.md`](privacy.md) (`/privacy/`) に記載しています
 
 ---
 
@@ -167,3 +172,20 @@ Actionsのビルド結果を確認する運用でも問題ありません。
 - **サイトが更新されない** → リポジトリの **Actions** タブでビルドが失敗していないか確認
 - **画像を追加したい** → `assets/images/` にファイルを置き、記事から `![説明](/assets/images/ファイル名.jpg)` の形式で参照
 - **独自ドメインにしたい場合**(例: `sapporo-konan-rotaract.jp`) → ドメイン取得費用は有料になりますが、GitHub Pages自体の設定変更は無料でできます(`Settings > Pages > Custom domain`)
+
+---
+
+## 7. 導入済みの外部サービス一覧
+
+サイト運営のために、以下の無料サービスを連携しています。引き継ぎの際はあわせて確認してください。
+
+| サービス | 用途 | リンク |
+| --- | --- | --- |
+| 管理画面(Decap CMS) | 画面から活動報告を作成・編集 | `/admin/`(手順は [ADMIN.md](ADMIN.md)) |
+| Googleフォーム | お問い合わせフォームの送信先・回答確認 | https://docs.google.com/forms/d/1T5P1LaRViDimSwRzVsh-otBH_SSE937bpMsphAyxCsg/edit |
+| Google Search Console | 検索エンジンへのサイトマップ送信・インデックス状況確認 | https://search.google.com/search-console (プロパティ: `https://sapporokonan-rotaract.github.io/`) |
+| Cloudflare Web Analytics | サイト全体の閲覧数・アクセス状況の確認 | Cloudflareダッシュボード → Analytics & Logs → Web Analytics |
+| Cloudflare Workers | 管理画面ログイン用のOAuth仲介サーバー | 詳細は [ADMIN.md](ADMIN.md) |
+
+GoogleフォームやSearch Console、Cloudflareは個人のGoogle/Cloudflareアカウントに紐づいています。
+役員交代時は、各サービスの「共有」「ユーザー追加」機能から後任者にもアクセス権を付与してください。
