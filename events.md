@@ -2,7 +2,7 @@
 layout: page
 title: 例会・行事予定
 permalink: /events/
-description: 札幌幌南ロータアクトクラブの例会情報や、見学・体験参加の方法をご案内します。
+description: 札幌幌南ローターアクトクラブの例会情報や、見学・体験参加の方法をご案内します。
 ---
 
 ## 定例例会
