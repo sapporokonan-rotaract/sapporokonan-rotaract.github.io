@@ -18,6 +18,23 @@
   <meta property="og:image" content="{{ page.image | default: '/assets/images/ogp.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- 構造化データ(JSON-LD)。検索エンジンにクラブ名・SNSリンクなどを伝えます -->
+  {% assign sameAs = "" | split: "," %}
+  {% if site.contact.instagram and site.contact.instagram != "" %}{% assign sameAs = sameAs | push: site.contact.instagram %}{% endif %}
+  {% if site.contact.facebook and site.contact.facebook != "" %}{% assign sameAs = sameAs | push: site.contact.facebook %}{% endif %}
+  {% if site.contact.x and site.contact.x != "" %}{% assign sameAs = sameAs | push: site.contact.x %}{% endif %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+    "logo": {{ '/assets/images/ogp.png' | absolute_url | jsonify }},
+    "description": {{ site.description | strip_newlines | jsonify }}{% if sameAs.size > 0 %},
+    "sameAs": {{ sameAs | jsonify }}{% endif %}
+  }
+  </script>
+
   {% feed_meta %}
 </head>
 <body>

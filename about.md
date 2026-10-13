@@ -2,6 +2,7 @@
 layout: page
 title: クラブ紹介
 permalink: /about/
+description: 札幌江南ロータアクトクラブの概要・所属地区・会員数など、クラブについてご紹介します。
 ---
 
 ## 札幌江南ロータアクトクラブとは

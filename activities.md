@@ -2,6 +2,7 @@
 layout: page
 title: 活動報告
 permalink: /activities/
+description: 札幌江南ロータアクトクラブのこれまでの活動報告を掲載しています。
 ---
 
 <div class="card-grid">
