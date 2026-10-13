@@ -189,3 +189,36 @@ Actionsのビルド結果を確認する運用でも問題ありません。
 
 GoogleフォームやSearch Console、Cloudflareは個人のGoogle/Cloudflareアカウントに紐づいています。
 役員交代時は、各サービスの「共有」「ユーザー追加」機能から後任者にもアクセス権を付与してください。
+
+---
+
+## 8. 新しい担当者に同じ権限を付与する手順
+
+既存の担当者と同じ権限を持たせたい場合、以下4箇所すべてで招待が必要です(1箇所だけでは不十分です)。
+
+### 8-1. GitHub(リポジトリ編集・管理画面ログイン)
+
+1. `https://github.com/orgs/sapporokonan-rotaract/people` を開く
+2. 「Invite member」→ 相手のGitHubアカウントを検索して招待
+3. 役割(Role)は「Owner」(既存担当者と同じ全権限)または「Member」を選択
+
+これにより、リポジトリの編集権限に加えて、管理画面(`/admin/`)へのログイン権限も得られます
+(管理画面はこのリポジトリへのpush権限があるアカウントのみログインできる仕組みのため)。
+
+### 8-2. Cloudflare(管理画面ログイン用Worker・Web Analyticsの管理)
+
+1. `https://dash.cloudflare.com/` の左メニュー「Manage Account」→「Members」
+2. 「Invite」→ 相手のメールアドレスを入力
+3. ロールは「Super Administrator」を選択
+
+### 8-3. Googleフォーム(お問い合わせ内容の確認・編集)
+
+1. フォーム編集画面(上記 7 の表のリンク)を開く
+2. 右上の「⋮」→「共同編集者を追加」
+3. 相手のGoogleアカウントのメールアドレスを入力して追加
+
+### 8-4. Google Search Console(検索状況の確認・設定)
+
+1. `https://search.google.com/search-console` でプロパティを開く
+2. 左メニュー「設定」→「ユーザーと権限」
+3. 「ユーザーを追加」→ 相手のGoogleアカウントを入力、権限は「フル」を選択
