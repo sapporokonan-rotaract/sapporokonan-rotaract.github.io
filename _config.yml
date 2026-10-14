@@ -29,8 +29,8 @@ nav:
 
 # 連絡先・SNS(お問い合わせページやフッターで使用。未定なら空のままでOK)
 contact:
-  instagram: ""
-  facebook: ""
+  instagram: "https://www.instagram.com/sapporo_konan.act/"
+  facebook: "https://www.facebook.com/people/%E6%9C%AD%E5%B9%8C%E5%B9%8C%E5%8D%97%E3%83%AD%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%88%E3%82%AF%E3%83%A9%E3%83%96/61588492140600/"
 
 plugins:
   - jekyll-feed
